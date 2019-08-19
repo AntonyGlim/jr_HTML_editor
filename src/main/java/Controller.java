@@ -5,7 +5,7 @@ import java.io.File;
 
 public class Controller {
 
-    private View view; //это представление
+    private View view; //представление
     private HTMLDocument document; //модель
     private File currentFile; //файл, который открыт в данный момент
 
@@ -13,7 +13,17 @@ public class Controller {
         this.view = view;
     }
 
-    public static void main(String[] args) {
+    public void init(){}
 
+    public static void main(String[] args) {
+        View view = new View();
+        Controller controller = new Controller(view);
+        view.setController(controller);
+        view.init();
+        controller.init();
+    }
+
+    public void exit(){
+        System.exit(0);
     }
 }
