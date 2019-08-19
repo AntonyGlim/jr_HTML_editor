@@ -5,7 +5,7 @@ import java.io.File;
 
 public class Controller {
 
-    private View view; //представление
+    private View view; //это представление
     private HTMLDocument document; //модель
     private File currentFile; //файл, который открыт в данный момент
 
